@@ -1,0 +1,28 @@
+nav {
+  height: 120px;
+  /* position: fixed; */
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em;
+  /* display: flex; */
+  z-index: 9;
+}
+
+span {
+  font-family: 'Bungee', cursive;  
+  display: flex;
+  align-items: center;
+}
+
+.writeNew {
+  float: right;
+  font-size: 0.75em;
+  flex-wrap: wrap;
+}
+
+i {
+  color: red;
+  size: 10px;
+  /* display: flex;
+  align-self: flex-end; */
+}
