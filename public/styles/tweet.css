@@ -1,0 +1,87 @@
+article.tweet-container {
+  border: solid black 3px;
+  border-radius: 5px;
+  color: hsl(193, 13%, 41%)
+}
+
+article.tweet-container:hover {
+  box-shadow: 10px 10px 2px 1px rgb(42 42 60 / 20%);
+}
+
+article.tweet-container header {
+  background-color: #eee;
+  height: 90px;
+  border-radius: 5px;
+  
+}
+
+article.tweet-container header h1 {
+  font-size: 1.5em;
+  float: left;
+  margin-left: 10px;
+}
+article.tweet-container header h2 {
+  font-size: 1em;
+  font-weight: 100;
+  margin-right: 10px;
+  float: right;
+}
+
+article.tweet-container header img {
+  float: left;
+  padding-top: 10px;
+  height: 55px;
+  width: auto;
+  margin-left: 15px;
+}
+
+article.tweet-container .tweet-body {
+  border-bottom: solid black 3px;
+  text-align: left;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+article.tweet-container footer {
+  height: 50px;
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+article.tweet-container footer i {
+  color: #4056A1;
+  margin-right: 11px;
+}
+
+article.tweet-container footer i:hover {
+  color: #b59b26;
+}
+
+/* <section>
+        <article class="tweet-container">
+          <header>
+            <div class="user-info">
+              <img src="https://i.imgur.com/73hZDYK.png">
+              <h1>Newtwon</h1>
+              <h2>@SirIsaac</h2>
+            </div>
+          </header>
+          <div class="tweet-body">
+            <p>
+              sample tweet text ;3; 
+            </p>
+          </div>
+          <footer>
+            <p>Date days ago</p>
+            <span>
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
+            </span>
+        </footer>
+        </article>
+      </section> */
