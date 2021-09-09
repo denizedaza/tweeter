@@ -1,5 +1,5 @@
 header {
-  height: 400px;
+  height: 210px;
   width: 100%;
   background-color: #8e97fa;
   background-image: url("https://www.transparenttextures.com/patterns/simple-horizontal-light.png");
@@ -10,4 +10,13 @@ header {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.avatar img{ 
+  height: 125px;
+  margin-top: 15px;
+}
+
+.avatar h2 {
+  margin-block: auto;
 }
