@@ -1,5 +1,5 @@
 
-$(document).ready(function () {
+$(document).ready(function() {
   $('div.errMsg').addClass('hidden');
   loadTweets();
   
@@ -12,9 +12,9 @@ const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
-const createTweetElement = function (twtObj) {
+const createTweetElement = function(twtObj) {
   const $tweetNew = $(
     `<article class="tweet-container">
       <header>
@@ -41,15 +41,15 @@ const createTweetElement = function (twtObj) {
 
   return $tweetNew;
 
-}
+};
 
 const loadTweets = function() {
-  $.get("/tweets", function (data) {
-    $('#tweet-text').val('')
+  $.get("/tweets", function(data) {
+    $('#tweet-text').val('');
     console.log(data);
     renderTweets(data);
   });
-}
+};
 
 const validateSubmit = event => {
   event.preventDefault();
@@ -74,15 +74,16 @@ const validateSubmit = event => {
     return;
   }
   const data = $('#form').serialize();
-  // url, data, success, dataType
+  // post format: url, data, success, dataType
   $.post("/tweets", data)
     .then($tweetError.hide("slow"))
+    .then($('.counter').val(140))
     .then(loadTweets());
-}
+};
 
-const renderTweets = function (arrayOfTwtObj) {
+const renderTweets = function(arrayOfTwtObj) {
   $('#tweets').empty();
   for (const obj of arrayOfTwtObj) {
     $('#tweets').prepend(createTweetElement(obj));
   }
-}
+};
