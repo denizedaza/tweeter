@@ -10,7 +10,7 @@ article.tweet-container:hover {
 }
 
 article.tweet-container header {
-  background-color: #eee;
+  background: transparent;
   height: 90px;
   border-radius: 5px;
   
@@ -60,4 +60,8 @@ article.tweet-container footer i {
 
 article.tweet-container footer i:hover {
   color: #b59b26;
+}
+
+article.tweet-container p {
+  padding-bottom: 10px;
 }
