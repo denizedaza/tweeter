@@ -11,6 +11,7 @@
 .counter {
   float: right;
   font-family: 'Bungee', cursive;
+  width: 60px;
 }
 
 textarea {
@@ -43,14 +44,19 @@ label {
   color: red;
 }
 
-p.errMsg {
-    margin: 20px;
+.errMsg {
     color: #c51244;
-    padding: 2px;
-    border: thick double #c51244;
-    display: inline;
+    padding: 4.5px;
+    outline: solid #c51244;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .new-tweet form div {
-  padding-top: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3px;
 }
