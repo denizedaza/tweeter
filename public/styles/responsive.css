@@ -1,0 +1,46 @@
+@media only screen and (min-width: 1024px) {
+  
+  main {
+    display:flex;
+    flex-direction: row;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+  header.profile {
+    width: 40vw;
+    margin-left: 2em;
+    margin-top: 3em;
+  }
+
+  .avatar {
+    padding-top: 10px;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60vw;
+    margin-right: 0px;
+  }
+
+  section.tweets-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 8em;
+    width: 60vw;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    min-height: 8em;
+    width: 45vw;
+    max-width: 750px;
+  }
+
+}
