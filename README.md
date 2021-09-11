@@ -5,7 +5,8 @@ Tweeter is a simple, single-page Twitter clone.
 This is a project built to practice HTML, CSS, JS, jQuery and AJAX front-end skills, while revisiting Node, Express and MongoDB back-end skills.
 
 ## Final Product
-
+!["Screenshot of mobile layout"](https://github.com/denizedaza/tweeter/blob/master/docs/tweeter-mobile1.png?raw=true)
+!["Screenshot of desktop layout with character limit warning"](https://github.com/denizedaza/tweeter/blob/master/docs/tweeter-desktop.png?raw=true)
 
 ## Getting Started
 
