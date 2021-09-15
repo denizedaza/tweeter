@@ -2,9 +2,9 @@
 $(document).ready(function() {
   $('div.errMsg').addClass('hidden');
   loadTweets();
-  
+
   $('#form').on('submit', validateSubmit);
-  
+
 });
 
 // ----------- functions ------------
@@ -46,7 +46,6 @@ const createTweetElement = function(twtObj) {
 const loadTweets = function() {
   $.get("/tweets", function(data) {
     $('#tweet-text').val('');
-    console.log(data);
     renderTweets(data);
   });
 };
@@ -62,12 +61,13 @@ const validateSubmit = event => {
     $tweetError.empty().toggleClass('.errMsg');
   }
 
+  // check if tweet content is over limit - fadeout delay after 3.5s 
   if (tweetAreaContent > 140) {
     $tweetError.removeClass('hidden');
     $tweetError.text("Your tweet is too long! We can't handle that many characters!").show().fadeOut(3500);
     return;
   }
-
+  // check if tweet area is empty
   if (tweetAreaContent === 0) {
     $tweetError.toggleClass('hidden');
     $tweetError.text("Your tweet has no content! :(").show().fadeOut(3500);
@@ -76,9 +76,11 @@ const validateSubmit = event => {
   const data = $('#form').serialize();
   // post format: url, data, success, dataType
   $.post("/tweets", data)
-    .then($tweetError.hide("slow"))
-    .then($('.counter').val(140))
-    .then(loadTweets());
+    .then(() => {
+      $tweetError.hide("slow")
+      $('.counter').val(140)
+      loadTweets()
+    })
 };
 
 const renderTweets = function(arrayOfTwtObj) {
