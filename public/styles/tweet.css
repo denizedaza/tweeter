@@ -64,4 +64,6 @@ article.tweet-container footer i:hover {
 
 article.tweet-container p {
   padding-bottom: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
